@@ -1,0 +1,19 @@
+{
+  "name": "fpl-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristoferMyhre/fpl-stats.git"
+  },
+  "author": "Kristofer Myhre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KristoferMyhre/fpl-stats/issues"
+  },
+  "homepage": "https://github.com/KristoferMyhre/fpl-stats#readme"
+}
