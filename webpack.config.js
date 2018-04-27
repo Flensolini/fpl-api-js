@@ -29,5 +29,11 @@ module.exports = {
 	devServer: {
 		contentBase: './dist',
 		hot: true
+	},
+	node: {
+		net: 'empty',
+		tls: 'empty',
+		fs: 'empty',
+		dns: 'empty'
 	}
 };

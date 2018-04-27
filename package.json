@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/KristoferMyhre/fpl-stats#readme",
   "dependencies": {
+    "firebase": "^4.13.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "webpack": "^4.6.0",
