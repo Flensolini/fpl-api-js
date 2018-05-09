@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { getPlayer, getBootstrap } from './requests/requests';
+import * as Requests from './requests/requests';
+import DataTable from './components/DataTable.jsx';
 
 
 const firebase = require("firebase/app");
@@ -14,32 +15,30 @@ const config = {
     storageBucket: "fantasy-analytic.appspot.com",
     messagingSenderId: "585951624811"
   };
-  firebase.initializeApp(config);
+firebase.initializeApp(config);
 
 
   const buttonStyle = {
-    background: 'lightcoral',
-    padding: '15px',
-    margin: '5px',
+    background: '#b2404d',
+    color: 'white',
+    padding: '15px 40px',
+    margin: '20px',
     boxShadow: 'none',
     border: 'none',
     fontWeight: 'bold'
   };
 
-const writeUserData = (userId, name, email, imageUrl) => {
-firebase.database().ref('users/' + userId).set({
-    username: name,
-    email: email,
-    profile_picture : imageUrl
-});
+const getPlayerHandler = () => {
+    Requests.getPlayer('18');
 }
 
 
 ReactDOM.render(
     <div>
-        <button style={buttonStyle} onClick={writeUserData("test", "test", "test", "test")} >Get player info</button>
-        <button style={buttonStyle} onClick={getPlayer} >Get player info</button>
-        <button style={buttonStyle} onClick={getBootstrap} >Get bootstrap info</button>
+        <button style={buttonStyle} onClick={getPlayerHandler} >Get player info</button>
+        <button style={buttonStyle} onClick={Requests.getBootstrap} >Update player data</button>
+        <hr/>
+        <DataTable />
     </div>,
   document.getElementById('app')
 );

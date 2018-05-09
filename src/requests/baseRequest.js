@@ -1,8 +1,11 @@
 const proxyURL = 'https://cors-anywhere.herokuapp.com/';
 const baseURL = 'https://fantasy.premierleague.com/drf/';
 export const reqType = {
-  bootstrap : 'bootstrap',
-  element : 'element-summary/70'
+  bootstrap : 'bootstrap', //Overview
+  element : 'element-summary/', //Players (playderID)
+  event : 'events', // Get all gameweeks
+  elementTypes: 'element-types', // Get all player positions
+  gameweekFixtures: 'fixtures/?event' //Get all fixtures for a specified gameweek (gameweek number)
 }
 
 export const doCORSRequest = (options, callback) => {
