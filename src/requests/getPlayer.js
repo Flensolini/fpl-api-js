@@ -13,7 +13,7 @@ export const getPlayer = (id) => {
   }
 
   const getPlayerHistory = (response) => {
-    console.log("Response: %s", response);
+    console.log(response);
 
   }
 

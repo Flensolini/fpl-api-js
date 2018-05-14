@@ -5,7 +5,8 @@ export const reqType = {
   element : 'element-summary/', //Players (playderID)
   event : 'events', // Get all gameweeks
   elementTypes: 'element-types', // Get all player positions
-  gameweekFixtures: 'fixtures/?event' //Get all fixtures for a specified gameweek (gameweek number)
+  gameweekFixtures: 'fixtures/?event', //Get all fixtures for a specified gameweek (gameweek number)
+  teams: 'teams' //Get all teams
 }
 
 export const doCORSRequest = (options, callback) => {

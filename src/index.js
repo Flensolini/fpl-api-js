@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as Requests from './requests/requests';
 import DataTable from './components/DataTable.jsx';
+import Header from './components/Header.jsx';
 
+require('./style/style.less')
 
 const firebase = require("firebase/app");
 require("firebase/database");
@@ -19,13 +21,15 @@ firebase.initializeApp(config);
 
 
   const buttonStyle = {
-    background: '#b2404d',
+    background: '#990000',
     color: 'white',
     padding: '15px 40px',
-    margin: '20px',
+    margin: '20px 20px 0 0',
     boxShadow: 'none',
     border: 'none',
+    borderRadius: '5px',
     fontWeight: 'bold'
+
   };
 
 const getPlayerHandler = () => {
@@ -35,10 +39,14 @@ const getPlayerHandler = () => {
 
 ReactDOM.render(
     <div>
-        <button style={buttonStyle} onClick={getPlayerHandler} >Get player info</button>
-        <button style={buttonStyle} onClick={Requests.getBootstrap} >Update player data</button>
-        <hr/>
-        <DataTable />
+        <Header bgColor="#990000" text='FPL tool' textColor='#fff'/>
+        <div className="content">
+          <button style={buttonStyle} onClick={getPlayerHandler} >Get player info</button>
+          <button style={buttonStyle} onClick={Requests.getBootstrap} >Update player data</button>
+          <button style={buttonStyle} onClick={Requests.getTeams} >Get teams data</button>
+          <hr/>
+          <DataTable />
+        </div>
     </div>,
   document.getElementById('app')
 );
