@@ -1,13 +1,9 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
-export const getLeague = (id) => {
-  doCORSRequest({
-    method: 'GET',
-    url: `${reqType.leagueClassicStanding}${id}`,
-    data: ''
-  }, handleLeagueResponse);
+const getLeague = (id) => {
+  const data = doCORSRequest(`${reqType.leagueClassicStanding}${id}/`);
+  return data;
 }
-  
-const handleLeagueResponse = (response) => {
-  return response;
-}
+
+
+export default getLeague;

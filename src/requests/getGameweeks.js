@@ -1,13 +1,8 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
-export const getGameweeks = () => {
-  doCORSRequest({
-    method: 'GET',
-    url: reqType.events,
-    data: ''
-  }, handleGameweekResponse);
+const getGameweeks = () => {
+  const data = doCORSRequest(reqType.events);
+  return data;
 }
-  
-const handleGameweekResponse = (response) => {
-  return response;
-}
+
+export default getGameweeks;

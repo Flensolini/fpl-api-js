@@ -1,13 +1,8 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
-export const getPLTeams = () => {
-  doCORSRequest({
-    method: 'GET',
-    url: reqType.teams,
-    data: ''
-  }, handlePLTeamResponse);
+const getPLTeams = () => {
+  const data = doCORSRequest(reqType.teams);
+  return data;
 }
 
-const handlePLTeamResponse = (response) => {
-  return response; 
-}
+export default getPLTeams;

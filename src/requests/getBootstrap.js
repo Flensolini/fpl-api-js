@@ -1,13 +1,8 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
-export const getBootstrap = () => {
-  doCORSRequest({
-    method: 'GET',
-    url: reqType.bootstrap,
-    data: ''
-  }, handleBootstrapResponse);
+const getBootstrap = async () => {
+  const data = doCORSRequest(reqType.bootstrap);
+  return data;
 }
-  
-const handleBootstrapResponse = (response) => {
-  return response;
-}
+
+export default getBootstrap;
