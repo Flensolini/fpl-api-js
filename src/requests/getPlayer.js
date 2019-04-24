@@ -1,6 +1,6 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
-export const getPlayer = (id) => {
+export default getPlayer = (id) => {
   doCORSRequest({
     method: 'GET',
     url: `${reqType.element}${id}`,
