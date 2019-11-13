@@ -1,6 +1,6 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
-export default getTeamyByGW = (id, gameweek) => {
+const getTeamyByGW = (id, gameweek) => {
   doCORSRequest({
     method: 'GET',
     url: `${reqType.entry}${id}${reqType.event}${gameweek}/picks`,
@@ -11,3 +11,5 @@ export default getTeamyByGW = (id, gameweek) => {
 const handleTeamResponse = (response) => {
   return response;
 }
+
+export default getTeamyByGW;

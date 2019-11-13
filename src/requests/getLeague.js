@@ -1,6 +1,6 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
-export default getLeague = (id) => {
+const getLeague = (id) => {
   doCORSRequest({
     method: 'GET',
     url: `${reqType.leagueClassicStanding}${id}`,
@@ -11,3 +11,5 @@ export default getLeague = (id) => {
 const handleLeagueResponse = (response) => {
   return response;
 }
+
+export default getLeague;

@@ -1,6 +1,6 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
-export default getBootstrap = () => {
+const getBootstrap = () => {
   doCORSRequest({
     method: 'GET',
     url: reqType.bootstrap,
@@ -11,3 +11,4 @@ export default getBootstrap = () => {
 const handleBootstrapResponse = (response) => {
   return response;
 }
+export default getBootstrap;
