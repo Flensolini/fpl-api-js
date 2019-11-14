@@ -7,8 +7,7 @@ module.exports = {
 	  	rules: [
 		{
 			test: /\.(js|jsx)$/,
-			exclude: /node_modules/,
-			use: ['babel-loader']
+			exclude: /node_modules/
 		},
 	  	]
 	},
@@ -16,7 +15,7 @@ module.exports = {
 	  	extensions: ['.js', '.jsx']
 	},
 	output: {
-		path: __dirname,
+		path: __dirname ,
 		publicPath: '/',
 		filename: 'index.js'
 	}

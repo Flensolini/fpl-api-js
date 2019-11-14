@@ -1,15 +1,8 @@
 import {doCORSRequest, reqType} from './baseRequest';
 
 const getTeam = (id) => {
-  doCORSRequest({
-    method: 'GET',
-    url: `${reqType.entry}${id}`,
-    data: ''
-  }, handleTeamResponse);
-}
-  
-const handleTeamResponse = (response) => {
-  return response;
+  const data = doCORSRequest(`${reqType.entry}/${id}/`);
+  return data;
 }
 
 export default getTeam;
