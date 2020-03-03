@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/KristoferMyhre/fpl-api-js"
   },
-  "author": "Kristofer Myhre",
+  "author": "Flensolini",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
